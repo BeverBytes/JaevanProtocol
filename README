@@ -1,0 +1,24 @@
+Protocol description:
+    Start Bytes (0xAB, 0xCD)
+    Destination Byte:
+        0x01: USB
+        0x02: ESP32
+        0x03: GR 
+    Command Byte (1 byte):
+        0x01: data
+        0x02: diagnostic GR
+        0x03: diagnostic ESP32
+        0x04: Mandelbrot
+    Data Length (2 bytes): Length of the data payload
+    Data Payload (up to 1023 bytes): Actual data being transmitted
+    Checksum (2 bytes): Checksum for error detection
+
+
+
+
+ESP32 Diagnostic:
+    UtilisationKey: 0xB7
+
+Mandelbrot initialisation:
+    InitialisationKey: 0xB8
+    RunKey: 0xB9
