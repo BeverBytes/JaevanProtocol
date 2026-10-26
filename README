@@ -1,9 +1,9 @@
 Protocol description:
     Start Bytes (0xAB, 0xCD)
     Destination Byte:
-        0x01: USB
-        0x02: ESP32
-        0x03: GR 
+        0x01: toUSB
+        0x02: toESP32
+        0x03: toGR 
     Command Byte (1 byte):
         0x01: data
         0x02: diagnostic GR
@@ -13,7 +13,15 @@ Protocol description:
     Data Payload (up to 1023 bytes): Actual data being transmitted
     Checksum (2 bytes): Checksum for error detection
 
-
+Calculator check:
+    Command Byte: 0x02
+    Data Length: 1 byte
+    Data Payload: 0xC7 -> check for GR
+    
+    response: 
+        Command Byte: 0x02
+        Data Length: 2 byte
+        Data Payload: 0xC7C8 -> ACK all clear
 
 
 ESP32 Diagnostic:
