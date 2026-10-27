@@ -28,5 +28,7 @@ ESP32 Diagnostic:
     UtilisationKey: 0xB7
 
 Mandelbrot initialisation:
-    InitialisationKey: 0xB8
+    ResultKey: 0xBA
     RunKey: 0xB9
+    InitialisationKey: 0xB8
+    
