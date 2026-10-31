@@ -9,6 +9,7 @@ Protocol description:
         0x02: diagnostic GR
         0x03: diagnostic ESP32
         0x04: Mandelbrot
+        0x05: Julia
     Data Length (2 bytes): Length of the data payload
     Data Payload (up to 1023 bytes): Actual data being transmitted
     Checksum (2 bytes): Checksum for error detection
@@ -27,8 +28,7 @@ Calculator check:
 ESP32 Diagnostic:
     UtilisationKey: 0xB7
 
-Mandelbrot initialisation:
+Mandelbrot/Julia initialisation:
     ResultKey: 0xBA
     RunKey: 0xB9
-    InitialisationKey: 0xB8
     
